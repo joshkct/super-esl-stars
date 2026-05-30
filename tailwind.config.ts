@@ -9,7 +9,21 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Verbjective academic palette (placeholder brand tokens).
+        // Verbjective academic brand palette. Every value maps to a CSS custom
+        // property declared in globals.css so colours stay centralised.
+        ink: {
+          DEFAULT: 'var(--color-ink)',
+          muted: 'var(--color-text-secondary)',
+        },
+        gold: {
+          DEFAULT: 'var(--color-gold)',
+        },
+        cream: 'var(--color-cream)',
+        surface: 'var(--color-surface)',
+        success: 'var(--color-success)',
+        'text-primary': 'var(--color-text-primary)',
+        'text-secondary': 'var(--color-text-secondary)',
+        // Legacy academic blue scale retained for existing dashboard/auth pages.
         brand: {
           50: '#eef4ff',
           100: '#d9e6ff',
@@ -21,10 +35,6 @@ const config: Config = {
           700: '#1a37a1',
           800: '#1b3185',
           900: '#1c2f6c',
-        },
-        ink: {
-          DEFAULT: '#0f172a',
-          muted: '#475569',
         },
       },
       fontFamily: {

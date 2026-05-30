@@ -14,31 +14,193 @@
   },
   "nav": {
     "home": "Home",
-    "pricing": "Pricing",
     "howItWorks": "How it works",
+    "about": "About",
+    "pricing": "Pricing",
+    "testimonials": "Testimonials",
     "contact": "Contact",
-    "dashboard": "Dashboard"
+    "dashboard": "Dashboard",
+    "signIn": "Sign In",
+    "getStarted": "Get Started",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "selectLanguage": "Select language"
   },
-  "landing": {
-    "hero": {
-      "title": "Master English with a dedicated tutor",
-      "subtitle": "Personalised one-to-one lessons designed around your goals.",
-      "cta": "Book your first session"
+  "hero": {
+    "eyebrow": "Professional English Tutoring",
+    "title": "Master English. Open Every Door.",
+    "subtitle": "Verbjective pairs you with a dedicated English tutor for live, one-on-one lessons built entirely around your goals. Whether you are starting out or refining fluency, every session moves you closer to confident, natural communication.",
+    "ctaPrimary": "Get Started",
+    "ctaSecondary": "View Pricing",
+    "illustrationAlt": "Abstract illustration of open books, speech bubbles and flowing letterforms representing language learning",
+    "badges": {
+      "levels": "All Levels Welcome",
+      "scheduling": "Flexible Scheduling",
+      "sessions": "Live 1-on-1 Sessions"
+    }
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "subtitle": "Four simple steps from sign-up to your first conversation.",
+    "steps": {
+      "signUp": {
+        "title": "Sign Up",
+        "description": "Create your account in seconds. No commitment required."
+      },
+      "choose": {
+        "title": "Choose Your Session",
+        "description": "Pick your level, session length, and a time that suits you."
+      },
+      "book": {
+        "title": "Book & Pay",
+        "description": "Secure your spot with a simple booking and invoice payment."
+      },
+      "join": {
+        "title": "Join Your Lesson",
+        "description": "Connect live via video call and start your English journey."
+      }
+    }
+  },
+  "about": {
+    "label": "Your Tutor",
+    "title": "Learn from an Experienced English Professional",
+    "photoPlaceholder": "Tutor photo placeholder",
+    "bio1": "With over a decade of experience teaching English to learners across the globe, your Verbjective tutor brings a rare blend of academic rigour and genuine warmth to every lesson. Holding a degree in English language education and an internationally recognised teaching qualification, they have guided students from complete beginners to confident professionals.",
+    "bio2": "Their teaching philosophy is simple: language is learned by using it. Lessons are conversational, practical, and tailored to you — built around real situations you will actually face, from job interviews and presentations to travel, study, and everyday conversation. Mistakes are welcomed as the fastest path to progress.",
+    "bio3": "What makes this tutor different is the relationship. You are never just another student in a crowded classroom. You receive focused, patient attention, honest feedback, and a personalised plan that adapts as you grow. The goal is not just to teach English, but to help you feel genuinely at home in it.",
+    "credentials": {
+      "tefl": "TEFL Certified",
+      "experience": "10+ Years Experience",
+      "students": "500+ Students Taught"
     },
-    "about": {
-      "title": "About your tutor"
+    "quote": "Fluency is not about being perfect — it is about being understood, and feeling confident every time you speak.",
+    "quoteAuthor": "Your Verbjective Tutor"
+  },
+  "pricing": {
+    "title": "Simple, Transparent Pricing",
+    "subtitle": "Pay as you go, or subscribe and save. You choose what works for you.",
+    "toggle": {
+      "payPerSession": "Pay Per Session",
+      "subscribe": "Subscribe & Save"
     },
-    "howItWorks": {
-      "title": "How it works"
+    "mostPopular": "Most Popular",
+    "perMonthFrom": "from {price}/month",
+    "sessionsPerMonth": "{count} sessions / month",
+    "saveBadge": "Save {percent}% vs pay-per-session",
+    "duration": {
+      "30": "30 min",
+      "60": "60 min",
+      "90": "90 min"
     },
-    "pricing": {
-      "title": "Pricing"
+    "bookCta": "Book a Session",
+    "subscribeCta": "Subscribe Now",
+    "levels": {
+      "beginner": {
+        "name": "Beginner",
+        "description": "For new learners building core vocabulary and confidence."
+      },
+      "intermediate": {
+        "name": "Intermediate",
+        "description": "For learners ready to speak fluently in everyday situations."
+      },
+      "advanced": {
+        "name": "Advanced",
+        "description": "For professionals refining nuance, tone and precision."
+      }
+    }
+  },
+  "testimonials": {
+    "title": "What Students Say",
+    "subtitle": "Real progress from learners around the world.",
+    "items": {
+      "one": {
+        "name": "Mariana Silva",
+        "country": "Brazil",
+        "flag": "🇧🇷",
+        "level": "Intermediate",
+        "quote": "I had studied English for years but froze the moment I had to speak. These sessions changed that completely. My tutor created a space where I felt safe to make mistakes, and within three months I led my first client meeting in English. I genuinely look forward to every lesson."
+      },
+      "two": {
+        "name": "Kenji Tanaka",
+        "country": "Japan",
+        "flag": "🇯🇵",
+        "level": "Advanced",
+        "quote": "As someone preparing for academic work abroad, I needed more than textbook English. My tutor pushed me on nuance, tone, and the small details that make writing sound natural. The feedback was honest and specific. My IELTS score jumped two full bands."
+      },
+      "three": {
+        "name": "Amira Hassan",
+        "country": "Egypt",
+        "flag": "🇪🇬",
+        "level": "Beginner",
+        "quote": "I started knowing almost nothing and was terrified. From the very first lesson I felt encouraged, never judged. We went at my pace and celebrated every small win. Now I can hold real conversations and even help my children with their English homework."
+      }
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know before your first lesson.",
+    "items": {
+      "booking": {
+        "question": "How does booking a session work?",
+        "answer": "Once you create your free account, you choose your level, pick a session length of 30, 60, or 90 minutes, and select an available time that suits you. You confirm with a simple booking, receive an invoice, and get a video call link for your lesson. The whole process takes just a couple of minutes."
+      },
+      "cancel": {
+        "question": "What happens if I need to cancel?",
+        "answer": "Life happens, and we understand. You can cancel or reschedule any session free of charge as long as you give at least 24 hours' notice before the start time. Cancellations made within 24 hours may be charged, so we always recommend rebooking as early as you can."
+      },
+      "difference": {
+        "question": "What is the difference between pay-per-session and subscribing?",
+        "answer": "Pay-per-session lets you book individual lessons whenever you like, with no ongoing commitment — perfect if your schedule varies. Subscribing gives you a set number of sessions each month at a discounted rate, which is ideal if you want consistent, steady progress and the best value."
+      },
+      "level": {
+        "question": "Which level is right for me?",
+        "answer": "If you are unsure, do not worry. Beginner suits new learners building core vocabulary; Intermediate is for those who can manage everyday conversation but want fluency; Advanced is for refining nuance and professional communication. Your tutor will confirm the best fit in your first session and adjust as you grow."
+      },
+      "join": {
+        "question": "What do I need to join a session?",
+        "answer": "Just a stable internet connection, a device with a camera and microphone, and a quiet space. Lessons take place over a video call link sent to you after booking. There is nothing to install beyond a standard browser or video app, and your tutor will help you get set up the first time."
+      }
+    }
+  },
+  "contact": {
+    "label": "Contact",
+    "title": "Let's Start the Conversation",
+    "subtitle": "Have a question before you begin? Send a message and we will get back to you personally.",
+    "details": {
+      "emailLabel": "Email",
+      "email": "hello@verbjective.com",
+      "responseLabel": "Response Time",
+      "response": "Within 1 business day",
+      "availabilityLabel": "Availability",
+      "availability": "Monday to Friday, 08:00 – 18:00 (SAST)"
     },
-    "testimonials": {
-      "title": "What students say"
-    },
-    "contact": {
-      "title": "Get in touch"
+    "form": {
+      "nameLabel": "Full name",
+      "namePlaceholder": "Your name",
+      "emailLabel": "Email address",
+      "emailPlaceholder": "you@example.com",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Tell us a little about your English goals…",
+      "submit": "Send Message",
+      "submitting": "Sending…",
+      "successTitle": "Message sent",
+      "successBody": "Thank you for reaching out. We will reply shortly.",
+      "errorBody": "Something went wrong sending your message. Please try again.",
+      "validationError": "Please check the highlighted fields and try again."
+    }
+  },
+  "footer": {
+    "tagline": "Professional one-on-one English tutoring, built around you.",
+    "navTitle": "Navigation",
+    "legalTitle": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "rights": "All rights reserved.",
+    "social": {
+      "instagram": "Instagram",
+      "facebook": "Facebook",
+      "linkedin": "LinkedIn",
+      "twitter": "X (Twitter)"
     }
   },
   "auth": {
@@ -53,13 +215,6 @@
     "googleContinue": "Continue with Google",
     "consentLabel": "I agree to the processing of my personal data in accordance with the Privacy Policy (POPIA & GDPR).",
     "consentRequired": "You must accept the privacy terms to continue."
-  },
-  "contact": {
-    "nameLabel": "Name",
-    "emailLabel": "Email",
-    "messageLabel": "Message",
-    "successTitle": "Message sent",
-    "successBody": "Thank you for reaching out. We will reply shortly."
   },
   "dashboard": {
     "student": {

@@ -3,12 +3,104 @@
 @tailwind utilities;
 
 :root {
-  --background: #f8fafc;
-  --foreground: #0f172a;
+  /* Verbjective brand palette */
+  --color-ink: #1b2a4a;
+  --color-gold: #c9a84c;
+  --color-cream: #f8f6f1;
+  --color-surface: #ffffff;
+  --color-text-primary: #1b2a4a;
+  --color-text-secondary: #6b7280;
+  --color-success: #2d6a4f;
+
+  /* Semantic aliases */
+  --background: var(--color-cream);
+  --foreground: var(--color-text-primary);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 
 @layer base {
   body {
     @apply bg-[color:var(--background)] text-[color:var(--foreground)] antialiased;
+  }
+
+  /* Visible, on-brand focus ring for all interactive elements. */
+  :focus-visible {
+    @apply outline-none ring-2 ring-gold ring-offset-2 ring-offset-[color:var(--background)];
+  }
+}
+
+@layer utilities {
+  /* Scroll-reveal animation primitives (driven by IntersectionObserver). */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition:
+      opacity 0.7s ease-out,
+      transform 0.7s ease-out;
+    will-change: opacity, transform;
+  }
+
+  .reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Slow floating animation for the hero illustration. */
+  @keyframes verb-float {
+    0%,
+    100% {
+      transform: translateY(-10px);
+    }
+    50% {
+      transform: translateY(10px);
+    }
+  }
+
+  .animate-float {
+    animation: verb-float 4s ease-in-out infinite;
+  }
+
+  @keyframes verb-float-slow {
+    0%,
+    100% {
+      transform: translateY(8px);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+
+  .animate-float-slow {
+    animation: verb-float-slow 6s ease-in-out infinite;
+  }
+}
+
+/* Respect user motion preferences: disable all motion. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .animate-float,
+  .animate-float-slow {
+    animation: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
   }
 }

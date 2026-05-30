@@ -8,8 +8,8 @@ type CookieToSet = { name: string; value: string; options: CookieOptions };
  * Supabase client for Server Components, Server Actions and Route Handlers.
  * Reads/writes the auth session via Next.js cookies. RLS still applies.
  */
-export function createClient() {
-  const cookieStore = cookies();
+export async function createClient() {
+  const cookieStore = await cookies();
 
   return createServerClient<Database>(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,

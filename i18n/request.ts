@@ -9,7 +9,7 @@ import { defaultLocale, isLocale, LOCALE_COOKIE, type Locale } from './config';
  * `[locale]` URL segment. Messages are loaded lazily per request.
  */
 export default getRequestConfig(async () => {
-  const cookieStore = cookies();
+  const cookieStore = await cookies();
   const cookieLocale = cookieStore.get(LOCALE_COOKIE)?.value;
 
   const locale: Locale =

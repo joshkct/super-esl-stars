@@ -9,7 +9,7 @@ import type { Profile } from '@/types';
 
 /** Returns the authenticated profile, or null if not signed in. */
 export async function getCurrentProfile(): Promise<Profile | null> {
-  const supabase = createClient();
+  const supabase = await createClient();
   const {
     data: { user },
   } = await supabase.auth.getUser();

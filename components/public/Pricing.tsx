@@ -18,7 +18,7 @@ async function loadPricing(): Promise<PricingLevelData[]> {
   let sessionsPerMonth: number | null = null;
 
   try {
-    const supabase = createClient();
+    const supabase = await createClient();
 
     const { data: pricingRows } = await supabase
       .from('pricing_config')

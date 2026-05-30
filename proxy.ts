@@ -2,14 +2,14 @@ import { NextResponse, type NextRequest } from 'next/server';
 import { updateSession } from '@/lib/supabase/middleware';
 
 /**
- * Global route protection.
+ * Global route protection (Next.js "proxy" convention, formerly `middleware`).
  *
  *  - Refreshes the Supabase session on every matched request.
  *  - Redirects unauthenticated users away from `/dashboard/*` to `/sign-in`.
  *  - Role-gates `/dashboard/tutor`: non-tutors are sent to the student area.
  *  - Sends already-authenticated users away from the auth pages.
  */
-export async function middleware(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   const { supabase, supabaseResponse, user } = await updateSession(request);
   const { pathname } = request.nextUrl;
 

@@ -1,0 +1,85 @@
+markdown# Verbjective — Windsurf Rules
+
+## Project Overview
+Verbjective is a professional, academic online English tutoring platform. There is one tutor and multiple students. Students book 1-on-1 live sessions via Zoom or Google Meet. The platform supports pay-per-session and subscription payment models. Invoices are generated as PDFs. The platform is multilingual from day one.
+
+## Tech Stack
+- Next.js 14, App Router, TypeScript (strict mode)
+- Tailwind CSS
+- Supabase (Postgres, Auth, Storage, RLS)
+- Resend + React Email for transactional emails
+- react-pdf/renderer for invoice PDFs
+- next-intl for internationalisation
+- React Hook Form + Zod for all forms
+- Vercel for deployment
+
+## Code Rules
+- TypeScript strict mode always — no `any` types ever
+- Server components by default — only use `use client` when interactivity requires it
+- All forms use React Hook Form with Zod validation
+- All Supabase queries must use typed clients generated from the schema
+- All dates stored in UTC, displayed in user's local timezone
+- All monetary values stored as integers in ZAR cents to avoid floating point errors
+- Sanitise all user inputs
+- Never hardcode secrets — all sensitive values come from environment variables
+- Never write to or read from `.env.local` — the developer manages that file manually
+
+## Folder Structure
+- `/app/(public)` — public pages (landing, contact, sign-in, sign-up)
+- `/app/(protected)/dashboard/student` — student dashboard
+- `/app/(protected)/dashboard/tutor` — tutor dashboard (role-gated)
+- `/components/ui` — reusable UI primitives
+- `/components/tutor` — tutor-specific components
+- `/components/student` — student-specific components
+- `/components/emails` — React Email templates
+- `/components/pdf` — React PDF invoice template
+- `/lib/supabase` — server and client Supabase helpers
+- `/lib/resend.ts` — email utility
+- `/lib/pricing.ts` — pricing calculation logic
+- `/lib/invoice.ts` — invoice generation logic
+- `/messages` — next-intl translation files
+- `/supabase/migrations` — all SQL migrations
+- `/types/index.ts` — all shared TypeScript types and enums
+
+## Security Rules
+- All dashboard routes are protected by Next.js middleware
+- `/dashboard/tutor` is role-gated — only users with role `tutor` may access it
+- Students may only read and write their own data (enforced by RLS)
+- The tutor may read all student data (enforced by RLS)
+- POPIA and GDPR compliance must be maintained — consent is stored per user
+
+## Database Rules
+- Never bypass RLS
+- Never use the service role key on the client side
+- The service role key is only used in server-side API routes and server actions
+- All new tables must have RLS enabled and appropriate policies
+- Run new migrations as SQL files in `/supabase/migrations` — never alter tables manually
+
+## Design Rules
+- Visual style: professional and academic
+- Tailwind only — no inline styles, no CSS modules
+- Mobile responsive on every page and component
+- Loading skeletons on all data-fetching components
+- Error boundaries on all dashboard pages
+- All public-facing copy must pass through next-intl translation keys — never hardcode display strings
+
+## Business Logic
+- Session price = determined by level (beginner/intermediate/advanced) × duration (30/60/90 min) from `pricing_config` table
+- Subscribers get a configurable discount rate stored in `app_settings` 
+- Subscription session limits are stored in `app_settings` and configurable by the tutor
+- Cancellations must be at least 24 hours before the session start time
+- When a pay-per-session booking is confirmed, generate a PDF invoice automatically
+- Both tutor and student may submit one optional post-session feedback message per booking
+- The tutor assigns English levels to students — students cannot set their own level
+
+## Communication Rules
+- No in-app messaging system
+- Post-session feedback is the only direct communication channel on the platform
+- The public contact form writes to `contact_submissions` — this is for pre-signup enquiries only
+- Session reminders are sent via email 24 hours before a session
+
+## When in Doubt
+- Ask before assuming
+- Never delete or modify existing migration files — create new ones
+- Never change the folder structure without being instructed to
+- Always confirm what you have built before moving to the next task

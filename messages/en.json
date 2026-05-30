@@ -1,0 +1,108 @@
+{
+  "common": {
+    "appName": "Verbjective",
+    "tagline": "Online English tutoring, refined.",
+    "loading": "Loading...",
+    "save": "Save",
+    "cancel": "Cancel",
+    "submit": "Submit",
+    "back": "Back",
+    "signIn": "Sign in",
+    "signUp": "Sign up",
+    "signOut": "Sign out",
+    "language": "Language"
+  },
+  "nav": {
+    "home": "Home",
+    "pricing": "Pricing",
+    "howItWorks": "How it works",
+    "contact": "Contact",
+    "dashboard": "Dashboard"
+  },
+  "landing": {
+    "hero": {
+      "title": "Master English with a dedicated tutor",
+      "subtitle": "Personalised one-to-one lessons designed around your goals.",
+      "cta": "Book your first session"
+    },
+    "about": {
+      "title": "About your tutor"
+    },
+    "howItWorks": {
+      "title": "How it works"
+    },
+    "pricing": {
+      "title": "Pricing"
+    },
+    "testimonials": {
+      "title": "What students say"
+    },
+    "contact": {
+      "title": "Get in touch"
+    }
+  },
+  "auth": {
+    "signInTitle": "Welcome back",
+    "signInSubtitle": "Sign in with a one-time code or Google.",
+    "signUpTitle": "Create your account",
+    "emailLabel": "Email address",
+    "fullNameLabel": "Full name",
+    "languageLabel": "Preferred language",
+    "sendCode": "Send code",
+    "verifyCode": "Verify code",
+    "googleContinue": "Continue with Google",
+    "consentLabel": "I agree to the processing of my personal data in accordance with the Privacy Policy (POPIA & GDPR).",
+    "consentRequired": "You must accept the privacy terms to continue."
+  },
+  "contact": {
+    "nameLabel": "Name",
+    "emailLabel": "Email",
+    "messageLabel": "Message",
+    "successTitle": "Message sent",
+    "successBody": "Thank you for reaching out. We will reply shortly."
+  },
+  "dashboard": {
+    "student": {
+      "title": "Student dashboard",
+      "upcoming": "Upcoming sessions",
+      "book": "Book a session",
+      "history": "Session history",
+      "subscription": "Subscription",
+      "invoices": "Invoices",
+      "files": "Files",
+      "feedback": "Feedback",
+      "profile": "Profile"
+    },
+    "tutor": {
+      "title": "Tutor dashboard",
+      "overview": "Overview",
+      "availability": "Availability",
+      "bookings": "Bookings",
+      "roster": "Student roster",
+      "progressNotes": "Progress notes",
+      "pricing": "Pricing",
+      "subscriptions": "Subscriptions",
+      "invoices": "Invoices",
+      "files": "Files",
+      "contactSubmissions": "Contact submissions",
+      "feedback": "Feedback"
+    }
+  },
+  "booking": {
+    "status": {
+      "pending": "Pending",
+      "confirmed": "Confirmed",
+      "cancelled": "Cancelled",
+      "completed": "Completed"
+    },
+    "level": {
+      "beginner": "Beginner",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced"
+    }
+  },
+  "errors": {
+    "generic": "Something went wrong. Please try again.",
+    "unauthorized": "You are not authorised to view this page."
+  }
+}

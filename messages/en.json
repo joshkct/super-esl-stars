@@ -203,19 +203,6 @@
       "twitter": "X (Twitter)"
     }
   },
-  "auth": {
-    "signInTitle": "Welcome back",
-    "signInSubtitle": "Sign in with a one-time code or Google.",
-    "signUpTitle": "Create your account",
-    "emailLabel": "Email address",
-    "fullNameLabel": "Full name",
-    "languageLabel": "Preferred language",
-    "sendCode": "Send code",
-    "verifyCode": "Verify code",
-    "googleContinue": "Continue with Google",
-    "consentLabel": "I agree to the processing of my personal data in accordance with the Privacy Policy (POPIA & GDPR).",
-    "consentRequired": "You must accept the privacy terms to continue."
-  },
   "dashboard": {
     "student": {
       "title": "Student dashboard",
@@ -254,6 +241,126 @@
       "beginner": "Beginner",
       "intermediate": "Intermediate",
       "advanced": "Advanced"
+    }
+  },
+  "auth": {
+    "brand": {
+      "stats": {
+        "levels": "All Levels Welcome",
+        "sessions": "Live 1-on-1 Sessions",
+        "scheduling": "Flexible Scheduling"
+      }
+    },
+    "signIn": {
+      "title": "Welcome back",
+      "subtitle": "Enter your email and we'll send you a secure sign in code",
+      "emailLabel": "Email address",
+      "emailPlaceholder": "you@example.com",
+      "sendCode": "Send Code",
+      "sending": "Sending code...",
+      "noAccountQuestion": "Don't have an account?",
+      "noAccountLink": "Sign up",
+      "notFound": "No account found with this email. Would you like to sign up?",
+      "notFoundLink": "Create an account"
+    },
+    "signUp": {
+      "title": "Create your account",
+      "subtitle": "Start your English learning journey today",
+      "emailLabel": "Email address",
+      "emailPlaceholder": "you@example.com",
+      "consent": "I agree to the <privacy>Privacy Policy</privacy> and <terms>Terms of Service</terms> and consent to my data being processed in accordance with POPIA and GDPR.",
+      "continue": "Continue",
+      "haveAccountQuestion": "Already have an account?",
+      "haveAccountLink": "Sign in",
+      "profileTitle": "Tell us about yourself",
+      "profileSubtitle": "Help us personalise your experience",
+      "firstNameLabel": "First name",
+      "firstNamePlaceholder": "Jane",
+      "lastNameLabel": "Last name",
+      "lastNamePlaceholder": "Doe",
+      "levelLabel": "Your English level",
+      "languageLabel": "Preferred language",
+      "completeSetup": "Complete Setup",
+      "completing": "Saving your profile...",
+      "skipForNow": "Skip for now"
+    },
+    "levels": {
+      "beginner": {
+        "name": "Beginner",
+        "description": "I'm just starting out"
+      },
+      "intermediate": {
+        "name": "Intermediate",
+        "description": "I can hold a conversation"
+      },
+      "advanced": {
+        "name": "Advanced",
+        "description": "I want to refine and perfect my English"
+      }
+    },
+    "otp": {
+      "title": "Check your email",
+      "sentTo": "We sent a 6-digit code to",
+      "digitLabel": "Digit {position} of 6",
+      "verifying": "Verifying...",
+      "expiresIn": "Code expires in {time}",
+      "resend": "Resend code",
+      "resendIn": "Resend code in {seconds}s",
+      "resending": "Resending...",
+      "back": "Back",
+      "tooManyAttempts": "Too many attempts. Please request a new code.",
+      "expired": "Your code has expired.",
+      "expiredResend": "Request a new code"
+    },
+    "welcome": {
+      "titleNamed": "Welcome to Verbjective, {name}!",
+      "title": "Welcome to Verbjective!",
+      "subtitle": "Your account is ready. Book your first live one-on-one lesson whenever it suits you, and start making real progress from day one.",
+      "bookCta": "Book Your First Session",
+      "completeProfileCta": "Complete Your Profile",
+      "redirecting": "Redirecting to your dashboard..."
+    },
+    "onboarding": {
+      "step1Title": "What's your current English level?",
+      "step2Title": "What language do you prefer?",
+      "step2Subtitle": "We'll show the platform in your preferred language",
+      "next": "Next",
+      "finish": "Finish Setup",
+      "skip": "Skip",
+      "skipOnboarding": "Skip onboarding",
+      "comingSoon": "Coming soon",
+      "successToast": "Profile updated successfully"
+    },
+    "errors": {
+      "generic": "Something went wrong. Please try again.",
+      "sendCodeFailed": "We couldn't send your code. Please try again.",
+      "invalidCode": "That code isn't correct. Please try again.",
+      "verifyFailed": "We couldn't verify your code. Please try again.",
+      "profileFailed": "We couldn't save your profile. Please try again.",
+      "sessionRequired": "Your session has expired. Please sign in again.",
+      "callbackFailed": "We couldn't complete sign in. Please try again."
+    }
+  },
+  "emails": {
+    "signIn": {
+      "subject": "Your Verbjective sign in code",
+      "preview": "Your secure sign in code",
+      "heading": "Your sign in code",
+      "intro": "Use the code below to sign in to your Verbjective account.",
+      "codeLabel": "Verification code",
+      "expiryNotice": "This code expires in 15 minutes.",
+      "ignore": "If you didn't request this code, you can safely ignore this email.",
+      "footer": "Verbjective — Online English tutoring, refined."
+    },
+    "signUp": {
+      "subject": "Welcome to Verbjective — verify your email",
+      "preview": "Verify your email to get started",
+      "heading": "Welcome to Verbjective",
+      "intro": "We're delighted to have you. Enter the code below to verify your email and finish creating your account.",
+      "codeLabel": "Verification code",
+      "expiryNotice": "This code expires in 15 minutes.",
+      "whatNext": "Once verified, you can set your English level, choose a session time, and meet your tutor for a live one-on-one lesson.",
+      "footer": "Verbjective — Online English tutoring, refined."
     }
   },
   "errors": {

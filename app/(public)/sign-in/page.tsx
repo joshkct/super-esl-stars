@@ -1,14 +1,24 @@
+import type { Metadata } from 'next';
+import { cookies } from 'next/headers';
+import { AuthLayout } from '@/components/auth/AuthLayout';
+import { SignInForm } from '@/components/auth/SignInForm';
+
+export const metadata: Metadata = {
+  title: 'Sign in — Verbjective',
+};
+
 /**
- * Sign-in page (placeholder).
- * Will offer email OTP and Google OAuth sign-in. UI to be built next.
+ * Sign-in page. Server wrapper that reads any `verbjective_redirect` cookie set
+ * by the middleware so the client form can return the user to their intended
+ * destination after verification.
  */
-export default function SignInPage() {
+export default async function SignInPage() {
+  const cookieStore = await cookies();
+  const redirect = cookieStore.get('verbjective_redirect')?.value;
+
   return (
-    <main className="mx-auto flex min-h-screen max-w-md flex-col justify-center px-6">
-      <h1 className="font-serif text-3xl font-bold text-brand-700">Sign in</h1>
-      <p className="mt-4 text-ink-muted">
-        Email OTP and Google sign-in coming soon.
-      </p>
-    </main>
+    <AuthLayout>
+      <SignInForm initialRedirect={redirect} />
+    </AuthLayout>
   );
 }

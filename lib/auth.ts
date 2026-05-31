@@ -1,4 +1,5 @@
 import { redirect } from 'next/navigation';
+import type { User } from '@supabase/supabase-js';
 import { createClient } from '@/lib/supabase/server';
 import type { Profile } from '@/types';
 
@@ -6,6 +7,20 @@ import type { Profile } from '@/types';
  * Server-side authentication and authorisation helpers.
  * Use these in Server Components / Server Actions to guard data access.
  */
+
+/**
+ * Ensures an authenticated session exists (but not necessarily a profile).
+ * Use for routes a brand-new user can reach before completing profile setup,
+ * such as /welcome and /onboarding.
+ */
+export async function requireSession(): Promise<User> {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) redirect('/sign-in');
+  return user;
+}
 
 /** Returns the authenticated profile, or null if not signed in. */
 export async function getCurrentProfile(): Promise<Profile | null> {

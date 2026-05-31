@@ -37,6 +37,42 @@ export const otpVerifySchema = z.object({
 });
 export type OtpVerifyInput = z.infer<typeof otpVerifySchema>;
 
+/** Person-name field: letters (incl. accented), spaces, hyphens, apostrophes. */
+const nameSchema = z
+  .string()
+  .trim()
+  .min(2, 'Please enter at least 2 characters')
+  .max(60)
+  .regex(/^[\p{L}][\p{L} '-]*$/u, 'Please use letters only');
+
+export const englishLevelSchema = z.enum(
+  ENGLISH_LEVELS as unknown as [string, ...string[]],
+);
+
+/**
+ * Profile completion (sign-up step 3 and onboarding). First/last name are
+ * collected separately in the UI and combined into `full_name` server-side,
+ * since the `profiles` table stores a single name column.
+ */
+export const completeProfileSchema = z.object({
+  firstName: nameSchema,
+  lastName: nameSchema,
+  englishLevel: englishLevelSchema,
+  languagePreference: z.string().trim().min(2).max(10).default('en'),
+  consentGiven: z.literal(true, {
+    errorMap: () => ({ message: 'Consent is required to continue.' }),
+  }),
+  consentAt: z.string().datetime(),
+});
+export type CompleteProfileInput = z.infer<typeof completeProfileSchema>;
+
+/** Onboarding update — no consent re-capture; name optional (already set). */
+export const onboardingSchema = z.object({
+  englishLevel: englishLevelSchema,
+  languagePreference: z.string().trim().min(2).max(10).default('en'),
+});
+export type OnboardingInput = z.infer<typeof onboardingSchema>;
+
 export const contactSchema = z.object({
   name: safeString(120).pipe(z.string().min(2)),
   email: emailSchema,

@@ -1,13 +1,26 @@
+import type { Metadata } from 'next';
+import { AuthLayout } from '@/components/auth/AuthLayout';
+import { SignUpForm } from '@/components/auth/SignUpForm';
+
+export const metadata: Metadata = {
+  title: 'Create your account — Verbjective',
+};
+
 /**
- * Sign-up page (placeholder).
- * Will collect full name, email, language preference and a required POPIA/GDPR
- * consent checkbox, then trigger a welcome email. UI to be built next.
+ * Sign-up page. Server wrapper supporting a `?step=profile` deep link used by
+ * the auth callback to drop new users straight into profile setup.
  */
-export default function SignUpPage() {
+export default async function SignUpPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ step?: string }>;
+}) {
+  const { step } = await searchParams;
+  const initialStep = step === 'profile' ? 'profile' : undefined;
+
   return (
-    <main className="mx-auto flex min-h-screen max-w-md flex-col justify-center px-6">
-      <h1 className="font-serif text-3xl font-bold text-brand-700">Sign up</h1>
-      <p className="mt-4 text-ink-muted">Registration form coming soon.</p>
-    </main>
+    <AuthLayout>
+      <SignUpForm initialStep={initialStep} />
+    </AuthLayout>
   );
 }

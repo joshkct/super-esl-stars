@@ -77,6 +77,35 @@ html {
   .animate-float-slow {
     animation: verb-float-slow 6s ease-in-out infinite;
   }
+
+  /* Inline step transition for multi-step auth flows (slides in from right). */
+  @keyframes verb-step-in {
+    from {
+      opacity: 0;
+      transform: translateX(24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .animate-step {
+    animation: verb-step-in 0.35s ease-out;
+  }
+
+  /* Draw-on animation for the welcome checkmark. */
+  @keyframes verb-draw {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  .animate-draw {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    animation: verb-draw 0.8s ease-out forwards;
+  }
 }
 
 /* Respect user motion preferences: disable all motion. */
